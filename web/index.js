@@ -1,5 +1,5 @@
 'use strict';
-import { TestConfigOption } from './config.js';
+import * as config from './config.js';
 import { Module } from './module.js';
 import { SubFolderModule } from './subfolder/submodule.js';
 
@@ -7,7 +7,7 @@ export class Index {
     init() {
         var viewEl = document.getElementById("view");
 
-        let text = `import { TestConfigOption } from './config.js':<br />${TestConfigOption}`;
+        let text = `import * as config from './config.js';':<br />config.TestConfigOption:${config.TestConfigOption}<br />config.AnotherOption:${config.AnotherOption}`;
         let p = document.createElement('p');
         p.innerHTML = text;
         viewEl.appendChild(p);

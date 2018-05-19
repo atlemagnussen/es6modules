@@ -20,10 +20,12 @@
 ```
 
 ## Declare modules (export)
-ex config.js:
+ex config.js with many exports:
 ```
 'use strict';
 export const TestConfigOption = "I am export const TestConfigOption";
+export const AnotherOption = "I am the other option";
+
 ```
 
 ex module.js
@@ -48,16 +50,17 @@ export class SubFolderModule {
 ## Use modules (import)
 ```
 'use strict';
-import { TestConfigOption } from './config.js';
+import * as config from './config.js';
 import { Module } from './module.js';
 import { SubFolderModule } from './subfolder/submodule.js';
-  
-console.log(TestConfigOption);
-  
+
+console.log(config.TestConfigOption);
+console.log(config.AnotherOption);
+
 let mod = new Module();
 let text = mod.get();
 console.log(text);
-  
+
 let sub = new SubFolderModule();
 let textsub = sub.get();
 console.log(textsub);
