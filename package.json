@@ -1,0 +1,24 @@
+{
+  "name": "es6modules",
+  "version": "1.0.0",
+  "description": "test es6 modules",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "es6",
+    "modules",
+    "javascript"
+  ],
+  "author": "atlemagnussen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
