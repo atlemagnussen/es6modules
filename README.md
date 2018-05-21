@@ -10,7 +10,6 @@
 ## Reference without script src
 ```
 <script type="module">
-  'use strict';
   import { Index } from './index.js';
   let index = new Index();
   index.init();
@@ -20,7 +19,6 @@
 ## Declare modules (export)
 ex config.js with many exports:
 ```
-'use strict';
 export const TestConfigOption = "I am export const TestConfigOption";
 export const AnotherOption = "I am the other option";
 
@@ -28,7 +26,6 @@ export const AnotherOption = "I am the other option";
 
 ex module.js
 ```
-'use strict';
 export class Module {
      get() {
          return "I am export class Module";
@@ -37,7 +34,6 @@ export class Module {
 ```
 ex subfolder/submodule.js
 ```
-'use strict';
 export class SubFolderModule {
      get() {
          return "I am export class SubFolderModule";
@@ -47,7 +43,6 @@ export class SubFolderModule {
 
 ## Use modules (import)
 ```
-'use strict';
 import * as config from './config.js';
 import { Module } from './module.js';
 import { SubFolderModule } from './subfolder/submodule.js';

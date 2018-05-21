@@ -1,10 +1,9 @@
-'use strict';
 import * as config from './config.js';
 import { Module } from './module.js';
 import { SubFolderModule } from './subfolder/submodule.js';
 
-export class Index {
-    init() {
+class Index {
+    constructor() {
         var viewEl = document.getElementById("view");
 
         let text = `import * as config from './config.js';':<br />config.TestConfigOption:${config.TestConfigOption}<br />config.AnotherOption:${config.AnotherOption}`;
@@ -27,3 +26,4 @@ export class Index {
         view.appendChild(ppp);
     }
 }
+export const index = new Index();
