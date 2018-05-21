@@ -13,9 +13,7 @@
   'use strict';
   import { Index } from './index.js';
   let index = new Index();
-  document.addEventListener("DOMContentLoaded", function() {
-      index.init();
-  });
+  index.init();
 </script>
 ```
 
