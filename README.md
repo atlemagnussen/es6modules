@@ -2,17 +2,13 @@
 
 ## Reference with script src in index.html (optional)
 ```
-<script type="module" src="config.js"></script>
-<script type="module" src="module.js"></script>
-<script type="module" src="subfolder/submodule.js"></script>
 <script type="module" src="index.js"></script>
 ```
 ## Reference without script src
 ```
 <script type="module">
   import { Index } from './index.js';
-  let index = new Index();
-  index.init();
+  let index = new Index(); // or export as new Index() as in this source code
 </script>
 ```
 
