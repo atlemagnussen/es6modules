@@ -1,5 +1,5 @@
-export class Module {
+export default class {
      get() {
-         return "I am export class Module";
+         return "I am export default class";
      }
 }
