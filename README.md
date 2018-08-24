@@ -1,5 +1,7 @@
 # ES6 modules
-A brief summary and how to use ECMAscript 6 modules in browser
+A brief summary and how to use ECMAscript 6 modules in browser  
+
+go to [Use modules import](#use-modules-import)
 
 ## Reference with script src in index.html (optional)
 ```html
@@ -47,22 +49,22 @@ export class SubFolderModule {
 }
 ```
 
-## Use modules (import)
+## Use modules import
 ```javascript
 import * as config from './config.js';
 import NameMeWhatEver from './module.js';
 import { NamedModule } from './namedmodule.js';
 import { SubFolderModule } from './subfolder/submodule.js';
-  
+
 console.log(config.TestConfigOption);
 console.log(config.AnotherOption);
-  
+
 let mod = new NameMeWhatEver();
 console.log(mod.get());
-  
+
 let named = NamedModule();
 console.log(named.get());
-  
+
 let sub = new SubFolderModule();
 console.log(sub.get());
 ```
